@@ -15,3 +15,8 @@ def post_model():
     final_output = model.run_model()
 
     return jsonify(final_output), 201
+
+
+if __name__ == "__main__":
+    app.run()
+    
