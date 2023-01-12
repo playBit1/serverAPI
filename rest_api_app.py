@@ -3,6 +3,9 @@ import ml_model_loader as ml
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
 
 # POST method to collect user data and return model output
 @app.route('/model', methods=['POST'])
