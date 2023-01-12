@@ -11,11 +11,7 @@ def post_model():
     data_name = data['virusName']
     data_list = data['userData']
 
-    #model = ml.MlModelLoader(data_name, data_list)
-    #final_output = model.run_model()
+    model = ml.MlModelLoader(data_name, data_list)
+    final_output = model.run_model()
 
-    return data_list
-
-
-if __name__ == '__main__':
-    app.run()
+    return jsonify(final_output), 201
